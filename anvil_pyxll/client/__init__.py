@@ -22,7 +22,7 @@ def on_open(import_info):
     cfg = get_config()
     token = cfg.get("ANVIL", "token", fallback="")
     if not token:
-        _log.warning("No Anvil token found. No remove functions will be available.")
+        _log.warning("No Anvil token found. No remote functions will be available.")
         return
 
     # Connect to the anvil server and register any functions
