@@ -10,7 +10,7 @@ see https://anvil.works.
 import setuptools
 
 setuptools.setup(
-    name="pyxll-anvil",
+    name="anvil-pyxll",
     version="0.1",
     author="PyXLL Ltd",
     author_email="info@pyxll.com",

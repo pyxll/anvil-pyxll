@@ -7,7 +7,7 @@ to be executed remotely via Anvil.
 For details about PyXLL, see https://www.pyxll.com, and for details about Anvil
 see https://anvil.works.
 """
-from .xl_funcs import register_xl_funcs
+from .xl_func import register_xl_funcs
 from pyxll import xl_on_open, xl_on_reload, get_config, rebind
 import anvil.server
 import logging
