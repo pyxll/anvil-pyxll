@@ -14,7 +14,7 @@ Create an Anvil application at https://anvil.works, and add the PyXLL applicatio
 as a dependency.
 
 The PyXLL Anvil application can be found here:
-https://O2G7KS4BHEV7QW4V.anvil.app/AJCIRYRRBCQ6WBCTLNP3QGTY
+https://pyxll.anvil.app
 
 In your Anvil application use the `anvil_pyxll.server.xl_func` decorator instead of
 the usual `pyxll.xl_func` decorator.
