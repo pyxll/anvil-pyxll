@@ -32,9 +32,12 @@ def register_xl_funcs(xl_funcs):
         exec(func_str, {}, ns)
         dummy_func = ns[func_name]
 
-        @wraps(dummy_func)
-        def wrapper_function(*args):
-           return anvil.server.call(anvil_name, *args)
+        def make_wrapper(template_func, func_name):
+            @wraps(template_func)
+            def wrapper_function(*args):
+                return anvil.server.call(func_name, *args)
+            return wrapper_function
 
+        wrapper_function = make_wrapper(dummy_func, anvil_name)
         wrapper_function.__name__ = func_name
         pyxll.xl_func(**kwargs)(wrapper_function)
